@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <!-- The title of our web page -->
+  <title>Off Campus Population</title>
+  
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+
+  <!-- CUSTOM CSS STYLESHEETS -->
+  
+  <!-- Load in our custom CSS stylesheet -->
+  <link rel="stylesheet" href="offCampus/css/stylesheet.css" />
+  
+  
+  
+  
+</head>
+
+<body>
+    
+    
+  
+  <!-- BASIC STRUCTURE OF WEB PAGE -->
+  
+  <!-- Create a `div` with the ID "#map" where we'll place our map -->
+  <div id='map' class='map'></div>
+    
+    <!-- Script Loads Township Data -->
+    
+    <script type="text/javascript" src="offCampus/js/township.js"></script>
+    
+    <!-- Script Loads Township Data -->
+    
+    <script type="text/javascript" src="offCampus/js/tabBlockCountWeb.js"></script>
+    
+    <!-- Script Loads Tab Block Data -->
+    
+    <script type="text/javascript" src="offCampus/js/addTownships.js"></script>
+    
+    <!-- Script Loads Tab Block Data -->
+    
+    <script type="text/javascript" src="offCampus/js/addBlocks.js"></script>
+    
+    <!-- Script adds initial map and baselayer choices -->
+    
+    <script type="text/javascript" src="offCampus/js/addMap.js"></script>
+    
+   <!--
+    <div id ='buttGroup' class="btn-group-vertical">
+        <button id="town" type="button" class="btn btn-primary">Townships</button>
+        <button id="BlockG" type="button" class="btn btn-primary">Block Groups</button>
+        <button id="Block" type="button" class="btn btn-primary">Blocks</button>
+    </div>
+	-->
+
+   
+
+	<script>
+        var level = 'blocks';
+    $(document).ready(function() {
+        $("#town").click(function(){
+            level = 'townships';
+            
+        });
+        $("#BlockG").click(function(){
+           level = 'block group';
+            
+        });
+        $("#Block").click(function(){
+            level = 'blocks';
+            
+        }); 
+    });
+    </script> 
+    
+    <script>
+        
+        if(level == 'townships') {
+        
+            addTownships();
+        
+        } else if(level == 'blocks'){
+            
+            addBlocks();
+            
+        }
+        
+var style = {
+				fillOpacity: 0,
+				weight: 2,
+				opacity: 1,
+				color: 'black'
+			};
+			
+		
+</script>
+    
+<div id='title' style="width:450px;">  Off Campus Student Population per Block </div>
+
+  
+</body>
+</html>
