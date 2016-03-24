@@ -1,0 +1,59 @@
+
+/* Position the division containing the map to fill the whole page and be under all other elements */
+#map { 
+  position:absolute; 
+  height: 100%; 
+  width:100%; 
+  z-index:-1; 
+}
+    
+/* Position and style the geolocation button */   
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.9;
+}
+
+#buttGroup {
+    position: fixed;
+    top: 130px;
+    right: 10px;
+}
+
+#title { 
+    position:absolute; 
+    top:.25em; bottom:80%; 
+    left:25em; 
+    right:5%; 
+    max-width:450px;          
+    width: 450px;
+    height: 35px;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    font-size: x-Large;
+    font-weight: bold;
+    font-family: "Franklin Gothic Medium";
+}
+
+
+
