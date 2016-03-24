@@ -9,7 +9,7 @@ var mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
         
         var map = L.map('map',{
             center: [40.7913, -77.8586], 
-            zoom: 11,
+            zoom: 14,
             layers:[streets]
         });
         
